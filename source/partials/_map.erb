@@ -1,1 +1,19 @@
-<%= image_tag "dummy-map.png" %>
+<div id="map" style="height:400px"></div>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+        });
+        var map = L.map('map', {
+            scrollWheelZoom: false,
+            center: [41.659472,-0.907274],
+            zoom: 14
+        });
+        L.marker([41.659472,-0.907274]).addTo(map)
+            .bindPopup('<strong>Etopia. Centro de arte y tecnología</strong>')
+            .openPopup();
+        map.addLayer(layer);
+});
+</script>
