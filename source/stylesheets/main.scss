@@ -33,7 +33,7 @@
  * -------------------------------------------------------------------
  */
 
-@import url("fonts.css");
+// @import url("fonts.css");	
 @import url("ionicons/css/ionicons.min.css");
 @import url("micons/micons.css");
 
@@ -152,10 +152,10 @@ p img {
 	margin: 0;
 }
 p.lead {
-	font-family: "merriweather-light", serif;
+	font-family: "merriweather-light", serif !important;
 	font-size: 1.8rem;
 	line-height: 1.8;
-	color: #737373;
+	color: #737373 !important; 
 }
 @media only screen and (max-width:768px) {
 	p.lead {
@@ -1526,7 +1526,7 @@ a.menu-toggle {
  */
 
 #features {
-	background: #090909 url(../images/features-bg.jpg) no-repeat center;
+	background: #090909 url(../images/etopia-2.jpg) no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
